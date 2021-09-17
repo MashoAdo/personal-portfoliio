@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@500&display=swap");
+// Resetting css
+html {
+	scroll-behavior: smooth;
+}
+
+*,
+::before,
+::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+// Reusable css
+
+// colors
+$Very-light-Orange-body: hsl(38, 22%, 93%);
+$Black: hsl(0, 0%, 0%);
+$ligh-Gray-project-item: hsl(0, 0%, 87%);
+$Light-Orange-project-item: hsl(31, 41%, 83%);
+$Border: hsl(40, 15%, 89%);
+$paragraph: #aea79c;
+$Orange-hover: hsl(14, 84%, 54%);
+
+// fonts
+$font-weights: (
+	"regular": 400,
+	"medium": 500,
+	"bold": 700,
+);
+
+$headings: "Poppins", sans-serif;
+$paragraph-text: "Roboto", sans-serif;
+
+// mixins
+@mixin flexDirection($direction, $justify) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: center;
+}
+
+@mixin h5Heading {
+	font-family: $headings;
+	font-weight: map-get($font-weights, medium);
+	color: #aea79c;
+	font-size: 0.9rem;
+	margin-bottom: 1rem;
+}
+
+//Body styling
+
+body {
+	background: $Very-light-Orange-body;
+	padding: 0 2rem;
+	overflow-x: hidden;
+	font-size: 14px;
+}
+
+// ====================HEADER SECTION=============
+nav {
+	position: relative;
+	display: block;
+}
+
+.top-nav {
+	@include flexDirection(row, space-between);
+	padding: 2rem 0;
+	border-bottom: 2px solid $paragraph;
+}
+
+// style menu
+.menu-btn {
+	width: 30px;
+	height: auto;
+	@include flexDirection(column, center);
+}
+.menu-bar {
+	height: 3px;
+	width: 100%;
+	background: $Black;
+	border-radius: 10px;
+	display: block;
+	margin: 0.2rem;
+}
+
+.logo {
+	font-family: $headings;
+	font-weight: map-get($font-weights, bold);
+	cursor: pointer;
+}
+
+// menu items
+.menu-items {
+	@include flexDirection(column, center);
+	align-items: flex-start;
+	display: none;
+	border-bottom: 2px solid $paragraph;
+
+	a {
+		color: $Black;
+		padding: 2rem 0 0;
+		font-family: $headings;
+		font-weight: map-get($font-weights, bold);
+		&:hover {
+			color: $Orange-hover;
+		}
+	}
+	&.active {
+		display: flex;
+	}
+}
+
+// Header Information
+.header-information {
+	padding: 4rem 0;
+	border-bottom: 2px solid $paragraph;
+}
+.introduction {
+	h5 {
+		@include h5Heading();
+	}
+	h1 {
+		font-family: $paragraph-text;
+		margin-bottom: 2rem;
+		font-size: 2rem;
+		line-height: 1.5;
+	}
+	P {
+		font-family: $headings;
+		color: #aea79c;
+		font-weight: map-get($font-weights, regular);
+		line-height: 1.7;
+	}
+	a {
+		color: $Black;
+		font-family: $paragraph-text;
+		font-size: 1rem;
+		text-transform: uppercase;
+	}
+}
+
+// chat button
+.chat-button {
+	@include flexDirection(row, flex-start);
+	cursor: pointer;
+	margin-top: 2rem;
+	h2 {
+		font-family: $paragraph-text;
+	}
+	.icon {
+		// border: 2px solid red;
+		transform: rotate(-45deg);
+		position: relative;
+		top: 2px;
+		left: -5px;
+		div {
+			height: 3.3px;
+			width: 23px;
+			background: $Black;
+			position: relative;
+			left: 15px;
+		}
+		ion-icon {
+			font-size: 25px;
+		}
+		@include flexDirection(row, flex-start);
+	}
+}
+
+// =================MAIN==========================
+// Stack section
+#stack {
+	padding: 4rem 0;
+	border-bottom: 2px solid $paragraph;
+}
+.current-stack,
+.currently-learning {
+	margin-bottom: 2rem;
+	h5 {
+		@include h5Heading();
+	}
+	ul {
+		display: grid;
+		grid-template-columns: repeat(auto);
+		li {
+			font-family: $headings;
+			font-size: 1.5rem;
+			cursor: pointer;
+			color: $paragraph;
+			position: relative;
+			&:hover {
+				color: $Orange-hover;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				width: 30px;
+				height: 2px;
+				background-color: $paragraph;
+				bottom: 20px;
+				transform: rotate(-70deg);
+			}
+		}
+	}
+}
+.responsibilities {
+	h5 {
+		@include h5Heading();
+	}
+	.service-items {
+		display: grid;
+	}
+	.item {
+		background-color: $Light-Orange-project-item;
+		margin-bottom: 1rem;
+		padding: 1rem;
+		cursor: pointer;
+		box-shadow: 6px 6px 4px $ligh-Gray-project-item;
+		transition: all 0.3s ease;
+		border-radius: 0px 20px 0px 20px;
+		&:hover {
+			box-shadow: 10px 10px 6px $ligh-Gray-project-item;
+		}
+		h6 {
+			color: $Black;
+			font-family: $headings;
+			font-size: 1.2rem;
+			margin-bottom: 0.5rem;
+		}
+		p {
+			font-family: $paragraph-text;
+			color: $paragraph;
+			line-height: 1.7;
+		}
+	}
+}

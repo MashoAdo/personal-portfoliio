@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@500&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background: #f1eee9;
+  padding: 0 2rem;
+  overflow-x: hidden;
+  font-size: 14px;
+}
+
+nav {
+  position: relative;
+  display: block;
+}
+
+.top-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 0;
+  border-bottom: 2px solid #aea79c;
+}
+
+.menu-btn {
+  width: 30px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-bar {
+  height: 3px;
+  width: 100%;
+  background: black;
+  border-radius: 10px;
+  display: block;
+  margin: 0.2rem;
+}
+
+.logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.menu-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  display: none;
+  border-bottom: 2px solid #aea79c;
+}
+
+.menu-items a {
+  color: black;
+  padding: 2rem 0 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.menu-items a:hover {
+  color: #ec5527;
+}
+
+.menu-items.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-information {
+  padding: 4rem 0;
+  border-bottom: 2px solid #aea79c;
+}
+
+.introduction h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #aea79c;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.introduction h1 {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.introduction P {
+  font-family: "Poppins", sans-serif;
+  color: #aea79c;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.introduction a {
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.chat-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.chat-button h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+.chat-button .icon {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  position: relative;
+  top: 2px;
+  left: -5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chat-button .icon div {
+  height: 3.3px;
+  width: 23px;
+  background: black;
+  position: relative;
+  left: 15px;
+}
+
+.chat-button .icon ion-icon {
+  font-size: 25px;
+}
+
+#stack {
+  padding: 4rem 0;
+  border-bottom: 2px solid #aea79c;
+}
+
+.current-stack,
+.currently-learning {
+  margin-bottom: 2rem;
+}
+
+.current-stack h5,
+.currently-learning h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #aea79c;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.current-stack ul,
+.currently-learning ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: ()[auto];
+      grid-template-columns: repeat(auto);
+}
+
+.current-stack ul li,
+.currently-learning ul li {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #aea79c;
+  position: relative;
+}
+
+.current-stack ul li:hover,
+.currently-learning ul li:hover {
+  color: #ec5527;
+}
+
+.current-stack ul li::after,
+.currently-learning ul li::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #aea79c;
+  bottom: 20px;
+  -webkit-transform: rotate(-70deg);
+          transform: rotate(-70deg);
+}
+
+.responsibilities h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #aea79c;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.responsibilities .service-items {
+  display: -ms-grid;
+  display: grid;
+}
+
+.responsibilities .item {
+  background-color: #e5d4c2;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  -webkit-box-shadow: 6px 6px 4px #dedede;
+          box-shadow: 6px 6px 4px #dedede;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 0px 20px 0px 20px;
+}
+
+.responsibilities .item:hover {
+  -webkit-box-shadow: 10px 10px 6px #dedede;
+          box-shadow: 10px 10px 6px #dedede;
+}
+
+.responsibilities .item h6 {
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.responsibilities .item p {
+  font-family: "Roboto", sans-serif;
+  color: #aea79c;
+  line-height: 1.7;
+}
+/*# sourceMappingURL=styles.css.map */
