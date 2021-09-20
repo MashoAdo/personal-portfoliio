@@ -12,15 +12,14 @@
 
 
     <!-- Ion Icons -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </head>
 
 <body>
-    <header>
+    <header id="home">
         <nav>
             <div class="top-nav">
-                <div class="logo">M.A</div>
+                <h3 class="logo">Masho Ado</h3>
                 <div class="menu-btn">
                     <span class="menu-bar"></span>
                     <span class="menu-bar"></span>
@@ -28,17 +27,17 @@
                 </div>
             </div>
             <ul class="menu-items">
-                <a href="#Home">HOME</a>
-                <a href="#stack">SKILLS/STACK</a>
-                <a href="Projects">PROJECTS</a>
-                <a href="Contact">CONTACT</a>
+                <a class="nav-link" href="#home">HOME</a>
+                <a class="nav-link" href="#stack">SKILLS/STACK</a>
+                <a class="nav-link" href="#projects">PROJECTS</a>
+                <a class="nav-link" href="#contact">CONTACT</a>
             </ul>
         </nav>
         <div class="header-information">
             <div class="">
                 <div class="introduction">
-                    <h5>HELLO, AM MASHO ADO</h5>
-                    <h1>A FRONTEND <br> WEB DEVELOPER</h1>
+                    <span>HELLO, I AM MASHO ADO</span>
+                    <h1>A NON-AWARDED WEB DEVELOPER</h1>
                     <p>I create web solutions using HTML5, CSS3 ,JAVASCRIPT, REACT, BOOTSRAP and Many More tools</p>
                 </div>
 
@@ -60,119 +59,138 @@
     <main>
         <section id="stack">
             <div class="current-stack">
-                <h5>CURRENT STACK</h5>
+                <span>CURRENT STACK</span>
                 <ul>
-                    <li class="skill">html5</li>
-                    <li class="skill">css3</li>
-                    <li class="skill">sass</li>
-                    <li class="skill">bootsrap</li>
-                    <li class="skill">react js</li>
-                    <li class="skill">javascript</li>
+                    <li class="skill">Html5</li>
+                    <li class="skill">Css3</li>
+                    <li class="skill">Sass</li>
+                    <li class="skill">Bootsrap</li>
+                    <li class="skill">React js</li>
+                    <li class="skill">javaScript</li>
                 </ul>
             </div>
             <div class="currently-learning">
-                <H5>LEARNING</H5>
+                <span>CURRENTLY LEARNING</span>
                 <ul>
-                    <li class="currently-learning-skill">node js</li>
-                    <li class="currently-learning-skill">express</li>
-                    <li class="currently-learning-skill">mongoDB</li>
-                    <li class="currently-learning-skill">graphQL</li>
-                    <li class="currently-learning-skill">rest Api</li>
+                    <li class="currently-learning-skill">Node js</li>
+                    <li class="currently-learning-skill">Express</li>
+                    <li class="currently-learning-skill">MongoDB</li>
+                    <li class="currently-learning-skill">GraphQL</li>
+                    <li class="currently-learning-skill">Restful Api</li>
                 </ul>
             </div>
-            <div class="responsibilities">
-                <h5>SERVICES</h5>
+            <div class="services">
+                <span>What I can Do</span>
                 <div class="service-items">
                     <div class="item">
-                        <h6>UI/UX</h6>
-                        <p>In collaboration with the Design team i help in optimizing the user experienceusing HTML,
-                            JavaScript and CSS to bring concepts to life and developing and maintaining the
-                            user interface.
+                        <h6>CONVERT UI/UX DESIGNS TO CODE</h6>
+                        <p>The ultimate duty for any frontend developer is to bring designs into life by converting the
+                            designs into code. I am open to collaboration with your design team in order to
+                            deliver the best user interface and a seamless user experience.
                         </p>
                     </div>
                     <div class="item">
                         <h6>RESPONSIVE DESIGN</h6>
                         <p>Mobile phones and tablets are responsible for 56.74% of global internet usage. My process of
                             developement therefore takes into consideration the need for the websites to be responsive
-                            to all screens sizes by using media queries, fluid grids and flexibel visuals</p>
+                            to all screens sizes by using media queries, fluid grids and flexibel visuals and as a
+                            result i use the mobile first approach.</p>
                     </div>
                     <div class="item">
-                        <h6>API INTERGRATION</h6>
-                        <p>Most websites use data from external sources like databases and therefore need to be
-                            dynamically updated into websites. I am conversant with fetching data using APIs and
+                        <h6> INTERGRATE DATA FROM APIs INTO UI</h6>
+                        <p>Most websites use data from external sources like databases and APIs, this data needs to be
+                            dynamically updated into websites. I am conversant with fetching data using fetch API and
                             displaying data into UI</p>
                     </div>
                     <div class="item">
-                        <h6>SEO</h6>
-                        <p>SEO(Search Engine Optimization) helps in driving traffic to your website(isn't that what we
-                            all want). I am conversant with SEO principles that help your website be ranked favourably
+                        <h6>SEO (Search Engine Optimization)</h6>
+                        <p>SEO assists in driving traffic to your website(isn't that what we
+                            all want) resulting in an improved marketing strategy. I take into consideration SEO
+                            principles such as clean
+                            code,responsive design and user-friendly design,image optimization e.t.c during the
+                            development
+                            process these will
+                            result in your website being ranked favourably
                             by search engines.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="Projects">
-            <div>
-                <div>
-                    <img src="" alt="">
+        <section id="projects">
+            <h1>LATEST <br> PROJECTS</h1>
+            <div class="project-item">
+                <div class="project-img">
+                    <img src="../public/images/screenshots/easyBank.png" alt="easyBank-img">
                 </div>
-                <div>
-                    <p></p>
-                    <div>
-                        <a href="">VIEW SOURCE CODE</a>
-                        <a href="">LIVE SITE</a>
+                <div class="project-information">
+                    <span>EasyBank landing page</span>
+                    <p>This is a landing page for a fictional online bank that offers e-banking services to clients. The
+                        website is
+                        responsive to all screen sizes.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/MashoAdo/Easy-banking">VIEW SOURCE CODE</a>
+                        <a href="https://bank2easy.netlify.app/">LIVE SITE</a>
                     </div>
                 </div>
             </div>
 
-            <div>
-                <div>
-                    <img src="" alt="">
+            <div class="project-item">
+                <div class="project-img">
+                    <img src="../public/images/screenshots/crowdFund.png" alt="crowdFund-img">
                 </div>
-                <div>
-                    <p></p>
-                    <div>
-                        <a href="">VIEW SOURCE CODE</a>
-                        <a href="">LIVE SITE</a>
+                <div class="project-information">
+                    <span>crowdFund page</span>
+                    <p>This is a home page for a crowd fund website. The number of bids available reduces as you select
+                        the bid. It
+                        is
+                        also responsive to all screen sizes</p>
+                    <div class="project-links">
+                        <a href="https://github.com/MashoAdo/crowdfunding-page">VIEW SOURCE CODE</a>
+                        <a href="https://crowdfund2.netlify.app/">LIVE SITE</a>
                     </div>
                 </div>
             </div>
 
-            <div>
-                <div>
-                    <img src="" alt="">
+            <div class="project-item">
+                <div class="project-img">
+                    <img src="../public/images/screenshots/sunnySideAgency.png" alt="sunnySideAgency-img">
                 </div>
-                <div>
-                    <p></p>
-                    <div>
-                        <a href="">VIEW SOURCE CODE</a>
-                        <a href="">LIVE SITE</a>
+                <div class="project-information">
+                    <span>Sunnyside Agency</span>
+                    <p>Sunnyside is creative agency that provides photography and graphic design services.This website
+                        is responsive to mobile, tablet ,laptop and desktop</p>
+                    <div class="project-links">
+                        <a href="https://github.com/MashoAdo/Sunnyside-Agency-Landing-Page">VIEW SOURCE CODE</a>
+                        <a href="https://sunnysideagency2.netlify.app/">LIVE SITE</a>
                     </div>
                 </div>
             </div>
 
-            <div>
-                <div>
-                    <img src="" alt="">
+            <div class="project-item">
+                <div class="project-img">
+                    <img src="../public/images/screenshots/loopStudios.png" alt="loops-studios-img">
                 </div>
-                <div>
-                    <p></p>
-                    <div>
-                        <a href="">VIEW SOURCE CODE</a>
-                        <a href="">LIVE SITE</a>
+                <div class="project-information">
+                    <span>Loop Studios</span>
+                    <p>Loop Studios offers virtual reality services to its clients.The website needed to display their
+                        previous works as grid and responsive to all device screen sizes</p>
+                    <div class="project-links">
+                        <a href="https://github.com/MashoAdo/loops-studios">VIEW SOURCE CODE</a>
+                        <a href="https://loopstudiosvr.netlify.app/">LIVE SITE</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="Contact">
+        <section id="contact">
+            <span>Let's Chat</span>
             <form action="/post" method="post">
-                <label for="name">Name :</label>
-                <input type="text" name="name">
+                <label>Email : <input type="text" name="name"></label>
 
-                <label for="message">Message :</label>
-                <input type="text" name="message">
+
+                <label for="message">Message :<input type="text" name="message"></label>
+
 
                 <button type="submit">Send Message</button>
             </form>
@@ -180,27 +198,31 @@
     </main>
 
     <footer>
-        <div>
-            <div class="address">
-                <p>MASHOADO@GMAIL.COM</p>
-                <p>NAIROBI,KENYA</p>
-                <P>+254 724 261 55</P>
-            </div>
-            <div class="socials">
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-            </div>
-        </div>
-        <div>
-            <div class="logo">MASHO ADO</div>
-            <P> &copy;
-                <script> new Date().getFullYear()</script>. All Rights Reserved
+        <div class="footer-left">
+            <h3 class="logo">Masho Ado</h3>
+            <P class="copyright"> &copy;
+                <span id="year"></span>. All Rights Reserved
             </P>
         </div>
-    </footer>
+        <div class="footer-right">
+            <div class="address">
+                <p>mashoado@gmail.com</p>
+                <p>Nairobi, Kenya</p>
+                <P>+254 724 261 655</P>
+            </div>
+            <ul class="socials">
+                <li><a href="https://github.com/MashoAdo?tab=repositories"><img
+                            src="../public/images/socials/github.svg" alt="github-svg"></a></li>
 
+                <li><a href=""><img src="../public/images/socials/email.svg" alt="email-svg"></a></li>
+                <a href=""></a>
+                <a href=""></a>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
     <script src="../public/client.js"></script>
 </body>
 
