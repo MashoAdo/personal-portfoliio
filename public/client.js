@@ -3,7 +3,6 @@ const menuBtn = document.getElementsByClassName("menu-btn")[0]
 const navLinks = document.getElementsByClassName("nav-link")
 
 const navLinksarr = [...navLinks]
-console.log(navLinksarr)
 
 const menu = document.getElementsByClassName("menu-items")[0]
 
