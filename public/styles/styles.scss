@@ -106,28 +106,35 @@ nav {
 }
 
 // menu items
-.menu-items {
-	@include flexDirection(column, center);
-	align-items: flex-start;
-	display: none;
-	border-bottom: 1px solid $paragraph;
-
-	a {
-		color: $Black;
-		padding: 3rem 0 0;
-		font-family: $headings;
-		font-weight: map-get($font-weights, Extra-bold);
-		font-size: 1.3rem;
-		transition: color 0.3s ease;
-		&:hover {
-			color: $Orange-hover;
-		}
-		&:last-child {
-			padding-bottom: 3rem;
-		}
+.nav-link {
+	color: $Black;
+	font-family: $headings;
+	font-weight: map-get($font-weights, Extra-bold);
+	font-size: 1rem;
+	transition: color 0.3s ease;
+	margin-left: 2rem;
+	&:hover {
+		color: $Orange-hover;
 	}
-	&.active {
-		display: flex;
+}
+
+@media screen and (max-width: 768px) {
+	.menu-items {
+		@include flexDirection(column, center);
+		align-items: flex-start;
+		display: none;
+		border-bottom: 1px solid $paragraph;
+
+		&.active {
+			display: flex;
+		}
+		a {
+			padding: 3rem 0 0;
+
+			&:last-child {
+				padding-bottom: 3rem;
+			}
+		}
 	}
 }
 
@@ -163,6 +170,7 @@ nav {
 .header-image {
 	overflow: hidden;
 	margin-top: 3rem;
+	max-width: 500px;
 	img {
 		border: 2px solid $paragraph;
 		width: 100%;
@@ -207,8 +215,7 @@ nav {
 // =================MAIN==========================
 // Stack section
 #stack {
-	padding: 4rem 0;
-	border-bottom: 1px solid $paragraph;
+	padding: 4rem 0 0;
 }
 .current-stack,
 .currently-learning {
@@ -216,43 +223,39 @@ nav {
 	span {
 		@include h5Heading();
 	}
-	ul {
-		display: grid;
-		grid-template-columns: repeat(auto);
-		li {
-			font-family: $paragraph-text;
-			font-weight: map-get($font-weights, Extra-light);
-			font-size: 2.3rem;
-			cursor: pointer;
-			color: $paragraph;
-			position: relative;
-			margin-bottom: 0.5rem;
-			transition: color 0.3s ease;
+}
+.tools {
+	display: grid;
+	grid-template-columns: repeat(auto);
 
-			&:hover {
-				color: $Orange-hover;
-			}
-			&::after {
-				content: "";
-				position: absolute;
-				width: 30px;
-				height: 2px;
-				background-color: $paragraph;
-				bottom: 20px;
-				transform: rotate(-70deg);
-			}
+	li {
+		@include flexDirection(row, flex-start);
+		font-family: $paragraph-text;
+		font-weight: map-get($font-weights, Extra-light);
+		font-size: 2.3rem;
+		cursor: pointer;
+		color: $paragraph;
+		position: relative;
+		margin-bottom: 0.5rem;
+		transition: color 0.3s ease;
+		&:hover {
+			color: $Orange-hover;
 		}
 	}
 }
-.services {
+
+// SERVICES
+#services {
+	padding: 4rem 0;
+	border-bottom: 1px solid $paragraph;
 	span {
 		@include h5Heading();
 	}
-	.service-items {
-		display: grid;
-		padding-top: 1rem;
-	}
-	.item {
+}
+.service-items {
+	display: grid;
+	padding-top: 1rem;
+	.service-item {
 		margin-bottom: 4rem;
 		padding: 2rem;
 		cursor: pointer;
@@ -410,5 +413,113 @@ footer {
 		width: 25px;
 		height: 25px;
 		fill: $Orange-hover;
+	}
+}
+
+// MEDIA QUERIES
+@media screen and (min-width: 769px) {
+	// header
+	.top-nav {
+		border: none;
+	}
+	.menu-btn {
+		display: none;
+	}
+	.header-image {
+		margin-top: 0;
+		height: 100vh;
+	}
+	nav {
+		@include flexDirection(row, space-between);
+		border-bottom: 1px solid $paragraph;
+	}
+
+	// skills and stack
+	.tools {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.service-items {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 40px;
+		.service-item {
+			margin: 0;
+		}
+	}
+}
+
+@media screen and (min-width: 830px) {
+	// header
+
+	.header-information {
+		padding: 6rem 0 0;
+		@include flexDirection(row, space-between);
+		align-items: flex-start;
+	}
+	.header-image {
+		max-width: 350px;
+	}
+	.tools {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	// projects
+	#projects {
+		padding-bottom: 5rem;
+	}
+
+	.project-item {
+		@include flexDirection(row, center);
+		margin: 0;
+		&:nth-child(2n + 2) {
+			flex-direction: row-reverse;
+		}
+	}
+
+	.project-information,
+	.project-img {
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	body {
+		padding: 0 5rem;
+	}
+	// header image
+	.header-image {
+		max-width: 450px;
+	}
+
+	// skills
+	.tools {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	body {
+		padding: 0 8rem;
+		font-size: 16px;
+	}
+	.header-image {
+		max-width: 500px;
+		height: 100vh;
+	}
+
+	.service-items {
+		gap: 100px;
+	}
+	.project-items {
+		gap: 100px;
+		column-gap: 200px;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	body {
+		padding: 0 10rem;
+	}
+	.tools {
+		grid-template-columns: repeat(6, 1fr);
 	}
 }
