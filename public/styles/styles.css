@@ -115,20 +115,21 @@ nav {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    display: none;
     border-bottom: 1px solid #8f887d;
+    display: none;
   }
-  .menu-items.active {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .menu-items a {
+  .menu-items .nav-link {
     padding: 3rem 0 0;
   }
-  .menu-items a:last-child {
+  .menu-items .nav-link:last-child {
     padding-bottom: 3rem;
   }
+}
+
+.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .header-information {
@@ -139,8 +140,12 @@ nav {
 .introduction span {
   font-family: "Poppins", sans-serif;
   color: #8f887d;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
+}
+
+.introduction span strong {
+  color: #ec5527;
 }
 
 .introduction h1 {
@@ -168,41 +173,28 @@ nav {
   overflow: hidden;
   margin-top: 3rem;
   max-width: 500px;
+  position: relative;
 }
 
-.header-image img {
-  border: 2px solid #8f887d;
+.header-image .profile-image {
+  border: 1px solid #8f887d;
   width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
 }
 
-.header-image img:hover {
+.header-image .profile-image:hover {
   -webkit-filter: none;
           filter: none;
   border: 2px solid #ec5527;
 }
 
 .chat-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
   margin-top: 2rem;
 }
 
@@ -210,37 +202,21 @@ nav {
   font-family: "Poppins", sans-serif;
 }
 
-.chat-button .icon {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+.email-button {
+  background: none;
+  border: 1px solid #8f887d;
+  padding: 1rem 2rem;
+  font-family: "Poppins", sans-serif;
+  color: #8f887d;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin-top: 2rem;
   position: relative;
-  top: 2px;
-  left: -5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.chat-button .icon div {
-  height: 3.3px;
-  width: 23px;
-  background: black;
-  position: relative;
-  left: 15px;
-}
-
-.chat-button .icon ion-icon {
-  font-size: 25px;
+.email-button:hover {
+  border: 1px solid #ec5527;
+  color: #ec5527;
 }
 
 #stack {
@@ -256,7 +232,7 @@ nav {
 .currently-learning span {
   font-family: "Poppins", sans-serif;
   color: #8f887d;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -304,7 +280,7 @@ nav {
 #services span {
   font-family: "Poppins", sans-serif;
   color: #8f887d;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -318,7 +294,7 @@ nav {
   margin-bottom: 4rem;
   padding: 2rem;
   cursor: pointer;
-  border: 2px solid #8f887d;
+  border: 1px solid #8f887d;
   -webkit-transition: border 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
   transition: border 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
   transition: border 0.4s ease-in-out, transform 0.4s ease-in-out;
@@ -326,7 +302,7 @@ nav {
 }
 
 .service-items .service-item:hover {
-  border: 2px solid #ec5527;
+  border: 1px solid #ec5527;
   -webkit-transform: scale(1.01);
           transform: scale(1.01);
 }
@@ -425,13 +401,12 @@ nav {
 
 #contact {
   padding: 5rem 0;
-  border-bottom: 1px solid #8f887d;
 }
 
 #contact span {
   font-family: "Poppins", sans-serif;
   color: #8f887d;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -483,7 +458,7 @@ form input:hover {
 form button {
   margin-top: 3rem;
   background: none;
-  border: 2px solid #8f887d;
+  border: 1px solid #8f887d;
   padding: 1rem 2rem;
   font-family: "Poppins", sans-serif;
   color: #8f887d;
@@ -492,12 +467,13 @@ form button {
 }
 
 form button:hover {
-  border: 2px solid #ec5527;
+  border: 1px solid #ec5527;
   color: #ec5527;
 }
 
 footer {
-  padding: 4rem 0;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -514,6 +490,7 @@ footer {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  border-bottom: 1px solid #8f887d;
 }
 
 .copyright {
@@ -547,6 +524,41 @@ footer {
   width: 25px;
   height: 25px;
   fill: #ec5527;
+}
+
+.socials li:hover {
+  -webkit-animation: bounce 0.6s ease-in-out;
+          animation: bounce 0.6s ease-in-out;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 @media screen and (min-width: 769px) {

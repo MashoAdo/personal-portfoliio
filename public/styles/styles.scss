@@ -48,6 +48,7 @@ $font-weights: (
 );
 
 // MIXINS
+// flexDirection
 @mixin flexDirection($direction, $justify) {
 	display: flex;
 	flex-direction: $direction;
@@ -55,11 +56,26 @@ $font-weights: (
 	align-items: center;
 }
 
+// button
+@mixin button {
+	background: none;
+	border: 1px solid $paragraph;
+	padding: 1rem 2rem;
+	font-family: $paragraph-text;
+	font-weight: map-get($font-weights, regular);
+	color: $paragraph;
+	transition: all 0.3s ease-in-out;
+	&:hover {
+		border: 1px solid $Orange-hover;
+		color: $Orange-hover;
+	}
+}
+// smallHeading
 @mixin h5Heading {
 	font-family: $paragraph-text;
 	font-weight: map-get($font-weights, regular);
 	color: $paragraph;
-	font-size: 0.9rem;
+	font-size: 1rem;
 	margin-bottom: 1rem;
 }
 
@@ -122,20 +138,18 @@ nav {
 	.menu-items {
 		@include flexDirection(column, center);
 		align-items: flex-start;
-		display: none;
 		border-bottom: 1px solid $paragraph;
-
-		&.active {
-			display: flex;
-		}
-		a {
+		display: none;
+		.nav-link {
 			padding: 3rem 0 0;
-
 			&:last-child {
 				padding-bottom: 3rem;
 			}
 		}
 	}
+}
+.active {
+	display: flex;
 }
 
 // Header Information
@@ -146,6 +160,9 @@ nav {
 .introduction {
 	span {
 		@include h5Heading();
+		strong {
+			color: $Orange-hover;
+		}
 	}
 	h1 {
 		font-family: $headings;
@@ -171,12 +188,13 @@ nav {
 	overflow: hidden;
 	margin-top: 3rem;
 	max-width: 500px;
-	img {
-		border: 2px solid $paragraph;
+	position: relative;
+	.profile-image {
+		border: 1px solid $paragraph;
 		width: 100%;
 		height: auto;
 		object-fit: cover;
-		transition: all 0.6s ease-in-out;
+		transition: all 0.6s ease;
 		filter: grayscale(100%);
 		&:hover {
 			filter: none;
@@ -187,29 +205,15 @@ nav {
 
 // chat button
 .chat-button {
-	@include flexDirection(row, flex-start);
-	cursor: pointer;
 	margin-top: 2rem;
 	h2 {
 		font-family: $paragraph-text;
 	}
-	.icon {
-		transform: rotate(-45deg);
-		position: relative;
-		top: 2px;
-		left: -5px;
-		div {
-			height: 3.3px;
-			width: 23px;
-			background: $Black;
-			position: relative;
-			left: 15px;
-		}
-		ion-icon {
-			font-size: 25px;
-		}
-		@include flexDirection(row, flex-start);
-	}
+}
+.email-button {
+	@include button();
+	margin-top: 2rem;
+	position: relative;
 }
 
 // =================MAIN==========================
@@ -259,11 +263,11 @@ nav {
 		margin-bottom: 4rem;
 		padding: 2rem;
 		cursor: pointer;
-		border: 2px solid $paragraph;
+		border: 1px solid $paragraph;
 		transition: border 0.4s ease-in-out, transform 0.4s ease-in-out;
 
 		&:hover {
-			border: 2px solid $Orange-hover;
+			border: 1px solid $Orange-hover;
 			transform: scale(1.01);
 		}
 		h6 {
@@ -340,7 +344,6 @@ nav {
 // contact section
 #contact {
 	padding: 5rem 0;
-	border-bottom: 1px solid $paragraph;
 	span {
 		@include h5Heading();
 	}
@@ -374,26 +377,18 @@ form {
 
 	button {
 		margin-top: 3rem;
-		background: none;
-		border: 2px solid $paragraph;
-		padding: 1rem 2rem;
-		font-family: $paragraph-text;
-		font-weight: map-get($font-weights, regular);
-		color: $paragraph;
-		transition: all 0.3s ease-in-out;
-		&:hover {
-			border: 2px solid $Orange-hover;
-			color: $Orange-hover;
-		}
+		@include button();
 	}
 }
 
 // footer
 
 footer {
-	padding: 4rem 0;
+	padding: 2rem 0;
+	margin-bottom: 2rem;
 	@include flexDirection(row, space-between);
 	align-items: flex-start;
+	border-bottom: 1px solid $paragraph;
 }
 .copyright {
 	font-family: $paragraph-text;
@@ -413,6 +408,22 @@ footer {
 		width: 25px;
 		height: 25px;
 		fill: $Orange-hover;
+	}
+	li {
+		&:hover {
+			animation: bounce 0.6s ease-in-out;
+		}
+	}
+}
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0);
 	}
 }
 
