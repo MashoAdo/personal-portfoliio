@@ -6,10 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masho Ado</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../public/images/favicon.ico" type="image/x-icon">
 
     <!-- Style Sheet -->
     <link rel="stylesheet" href="../public/styles/styles.css">
 
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 
     <!-- Ion Icons -->
 
@@ -37,22 +41,20 @@
         <div class="header-information">
             <div class="introduction-information">
                 <div class="introduction">
-                    <span>HELLO, I AM MASHO ADO</span>
-                    <h1>A NON-AWARDED <br> WEB DEVELOPER</h1>
-                    <p>I create web solutions using HTML5, CSS3 ,JAVASCRIPT, <br> REACT, BOOTSRAP and Many More tools
+                    <span id="greetings">HELLO, I AM <strong>MASHO ADO</strong></span>
+                    <h1 id="profession">A NON-AWARDED <br> WEB DEVELOPER</h1>
+                    <p id="profession-description">I create web solutions using HTML5, CSS3 ,JAVASCRIPT, <br> REACT,
+                        BOOTSRAP and Many More tools... <br>Nairobi, Kenya.
                     </p>
                 </div>
 
                 <div class="chat-button">
-                    <h2>LET'S CHAT</h2>
-                    <div class="icon">
-                        <div class="straight-line"></div>
-                        <ion-icon name="chevron-forward-outline"></ion-icon>
-                    </div>
+                    <h2 class="lets-chat">LET'S CHAT</h2>
+                    <button class="email-button">mashoado@gmail.com</button>
                 </div>
             </div>
             <div class="header-image">
-                <img src="../public/images/sideAdobe.png" alt="Masho-image">
+                <img class="profile-image" src="../public/images/sideAdobe.png" alt="Masho-image">
             </div>
         </div>
     </header>
@@ -70,7 +72,7 @@
                     </li>
                     <li class="skill">Bootsrap<div class="slanted-line"></div>
                     </li>
-                    <li class="skill">React js<div class="slanted-line"></div>
+                    <li class="skill">Reactjs<div class="slanted-line"></div>
                     </li>
                     <li class="skill">javaScript<div class="slanted-line"></div>
                     </li>
@@ -79,9 +81,9 @@
             <div class="currently-learning">
                 <span>CURRENTLY LEARNING</span>
                 <ul class="tools">
-                    <li class="currently-learning-skill">Node js<div class="slanted-line"></div>
+                    <li class="currently-learning-skill">Nodejs<div class="slanted-line"></div>
                     </li>
-                    <li class="currently-learning-skill">Express<div class="slanted-line"></div>
+                    <li class="currently-learning-skill">Expressjs<div class="slanted-line"></div>
                     </li>
                     <li class="currently-learning-skill">MongoDB<div class="slanted-line"></div>
                     </li>
@@ -119,21 +121,21 @@
                     </div>
                     <div class="service-item">
                         <h6>SEO (Search Engine Optimization)</h6>
-                        <p>SEO assists in driving traffic to your website(isn't that what we
-                            all want) resulting in an improved marketing strategy. I apply SEO
+                        <p>SEO is responsible in driving traffic towards your website (isn't that what we all want) by
+                            making search engines rank your
+                            website favourably. I apply SEO
                             principles such as clean
                             code,responsive design and user-friendly design,image optimization e.t.c during the
                             development
                             process
-                            resulting in your website being ranked favourably
-                            by search engines.</p>
+                            to improve SEO.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="projects">
-            <h1>LATEST <br> PROJECTS</h1>
+            <h1 id="projects-title">LATEST <br> PROJECTS</h1>
 
             <div class="project-items">
                 <div class="project-item">
@@ -236,13 +238,16 @@
                 <li><a href="https://github.com/MashoAdo?tab=repositories"><img
                             src="../public/images/socials/github.svg" alt="github-svg"></a></li>
 
-                <li><a href=""><img src="../public/images/socials/email.svg" alt="email-svg"></a></li>
-                <a href="">
-                    <img src="../public/images/socials/phone-call.svg" alt="">
-                </a>
-                <a href="">
-                    <img src="../public/images/socials/twitter.svg" alt="">
-                </a>
+                <li><a href="mailto:mashoado@gmail.com"><img src="../public/images/socials/email.svg"
+                            alt="email-svg"></a></li>
+
+                <li><a href="tel:+254 724 261 655">
+                        <img src="../public/images/socials/phone-call.svg" alt="">
+                    </a></li>
+
+                <li> <a href="https://twitter.com/Xnache">
+                        <img src="../public/images/socials/twitter.svg" alt="">
+                    </a></li>
             </ul>
         </div>
     </footer>
