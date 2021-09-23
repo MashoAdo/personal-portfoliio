@@ -1,7 +1,6 @@
 
 const menuBtn = document.getElementsByClassName("menu-btn")[0]
 const navLinks = document.getElementsByClassName("nav-link")
- console.log(navLinks)
 
 const navLinksarr = [...navLinks]
 
@@ -19,6 +18,11 @@ navLinksarr.forEach(link =>{
     })
 })
 
+// remove loader when all files have been sent to client browser
+$(window).on("load", function () {
+    $(".preloader-wrapper").fadeOut("slow")
+})
+
 
 // scroll reveal animations
 // ========HEADER SECTION===================
@@ -26,7 +30,7 @@ navLinksarr.forEach(link =>{
 ScrollReveal().reveal(".logo", {delay:500});
 ScrollReveal().reveal(".menu-btn", {delay:500});
 // menu-items
-ScrollReveal().reveal(".menu-items", {delay:500,easing:"ease-in"});
+
 greetings
 ScrollReveal().reveal("#greetings", {delay:300,easing:"ease-in"});
 // profession
@@ -40,13 +44,13 @@ ScrollReveal().reveal(".header-image", {delay:800,easing:"ease-in"});
 
 
 // ========SKILLS SECTION===================
-ScrollReveal().reveal(".current-stack", {delay:500,easing:"ease-in"});
-ScrollReveal().reveal(".currently-learning", {delay:500,easing:"ease-in"});
+ScrollReveal().reveal(".current-stack", {delay:300,easing:"ease-in"});
+ScrollReveal().reveal(".currently-learning", {delay:400,easing:"ease-in"});
 
 // skills
-ScrollReveal().reveal(".services >span", {delay:500,easing:"ease-in"});
-ScrollReveal().reveal(".service-item:nth-child(1),.service-item:nth-child(2)", {delay:500,easing:"ease-in"});
-ScrollReveal().reveal(".service-item:nth-child(3),.service-item:nth-child(4)", {delay:550,easing:"ease-in"});
+ScrollReveal().reveal(".services >span", {delay:300,easing:"ease-in"});
+ScrollReveal().reveal(".service-item:nth-child(1),.service-item:nth-child(2)", {delay:400,easing:"ease-in"});
+ScrollReveal().reveal(".service-item:nth-child(3),.service-item:nth-child(4)", {delay:500,easing:"ease-in"});
 
 
 
@@ -54,8 +58,8 @@ ScrollReveal().reveal(".service-item:nth-child(3),.service-item:nth-child(4)", {
 // ========PROJECTS SECTION===================
 ScrollReveal().reveal(".projects-title", {delay:500,easing:"ease-in"});
 
-ScrollReveal().reveal(".project-item:nth-child(1),.project-item:nth-child(2)", {delay:600,easing:"ease-in"});
-ScrollReveal().reveal(".project-item:nth-child(3),.project-item:nth-child(4)", {delay:650,easing:"ease-in"});
+ScrollReveal().reveal(".project-item:nth-child(1),.project-item:nth-child(2)", {delay:550,easing:"ease-in"});
+ScrollReveal().reveal(".project-item:nth-child(3),.project-item:nth-child(4)", {delay:600,easing:"ease-in"});
 
 
 // ========CONTACT SECTION===================
