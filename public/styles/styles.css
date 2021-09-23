@@ -25,6 +25,128 @@ body {
   padding: 0 2rem;
   overflow-x: hidden;
   font-size: 15px;
+  position: relative;
+}
+
+.preloader-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background: #f1eee9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.box {
+  width: 300px;
+  height: 100px;
+  background: #ec5527;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  height: 15px;
+  width: 105px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.container .circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-animation: move 500ms linear 0ms infinite;
+          animation: move 500ms linear 0ms infinite;
+  margin-right: 30px;
+}
+
+.container .circle:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: grow 500ms linear 0ms infinite;
+          animation: grow 500ms linear 0ms infinite;
+}
+
+.container .circle:last-child {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 0;
+  animation: grow 500ms linear 0s infinite reverse;
+}
+
+@-webkit-keyframes grow {
+  from {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+@keyframes grow {
+  from {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes move {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(45px);
+            transform: translateX(45px);
+  }
+}
+
+@keyframes move {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(45px);
+            transform: translateX(45px);
+  }
 }
 
 nav {
