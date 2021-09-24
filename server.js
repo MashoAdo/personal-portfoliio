@@ -25,7 +25,7 @@ app.post("/email", (req,res) =>{
 const {email,message} = (req.body)
 
 
-const to = "mashoadonache@gmail.com"
+const to = "mashoado@gmail.com"
 const from = "nache.masho@students.jkuat.ac.ke"
 const subject = "Employer  Message"
 
