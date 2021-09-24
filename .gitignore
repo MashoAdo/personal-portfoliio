@@ -1,4 +1,5 @@
-.env/
+.env
+.gitignore
 node_modules/
 style-guide.md
 public/styles/styles.css.map

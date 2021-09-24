@@ -10,7 +10,6 @@ const PORT = process.env.PORT || 8080
 // middlewares
 app.use(express.urlencoded({extended:false}))
 app.use("/public", express.static(path.join(__dirname , "public")))
-// app.use(express.json())
 
 console.log(__dirname)
 
@@ -26,7 +25,7 @@ app.post("/email", (req,res) =>{
 const {email,message} = (req.body)
 
 
-const to = "mashoado@gmail.com"
+const to = "mashoadonache@gmail.com"
 const from = "nache.masho@students.jkuat.ac.ke"
 const subject = "Employer  Message"
 
