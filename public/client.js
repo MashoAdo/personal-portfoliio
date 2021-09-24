@@ -1,10 +1,13 @@
 
 const menuBtn = document.getElementsByClassName("menu-btn")[0]
 const navLinks = document.getElementsByClassName("nav-link")
+const menu = document.getElementsByClassName("menu-items")[0]
+const emailBtn = document.getElementById("copy-button")
+const email = document.getElementById("email-copied")
 
 const navLinksarr = [...navLinks]
 
-const menu = document.getElementsByClassName("menu-items")[0]
+console.log(email, emailBtn)
 
 // Add or remove menu on clicking menu button
 menuBtn.addEventListener("click", () =>{
@@ -23,7 +26,15 @@ $(window).on("load", function () {
     $(".preloader-wrapper").fadeOut("slow")
 })
 
+// copy text on clipboard using clipboard api
+const textToCopy = email.textContent
 
+emailBtn.addEventListener("click",() =>{
+    navigator.clipboard.writeText(textToCopy)
+.then(() => { emailBtn.textContent ="copied!!!" })
+.catch((error) => { alert(`Copy failed! ${error}`) })
+})
+ 
 // scroll reveal animations
 // ========HEADER SECTION===================
 // logo

@@ -85,7 +85,7 @@ body {
 	background: $Very-light-Orange-body;
 	padding: 0 2rem;
 	overflow-x: hidden;
-	font-size: 15px;
+	font-size: 13px;
 	position: relative;
 }
 // preloader
@@ -271,7 +271,7 @@ nav {
 		filter: grayscale(100%);
 		&:hover {
 			filter: none;
-			border: 2px solid $Orange-hover;
+			border: 1px solid $Orange-hover;
 		}
 	}
 }
@@ -571,7 +571,7 @@ footer {
 	}
 	// header image
 	.header-image {
-		max-width: 450px;
+		max-width: 400px;
 	}
 
 	// skills
@@ -583,11 +583,6 @@ footer {
 @media screen and (min-width: 1200px) {
 	body {
 		padding: 0 8rem;
-		font-size: 16px;
-	}
-	.header-image {
-		max-width: 500px;
-		height: 100vh;
 	}
 
 	.service-items {

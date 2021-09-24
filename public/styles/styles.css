@@ -24,7 +24,7 @@ body {
   background: #f1eee9;
   padding: 0 2rem;
   overflow-x: hidden;
-  font-size: 15px;
+  font-size: 13px;
   position: relative;
 }
 
@@ -313,7 +313,7 @@ nav {
 .header-image .profile-image:hover {
   -webkit-filter: none;
           filter: none;
-  border: 2px solid #ec5527;
+  border: 1px solid #ec5527;
 }
 
 .chat-button {
@@ -789,7 +789,7 @@ footer {
     padding: 0 5rem;
   }
   .header-image {
-    max-width: 450px;
+    max-width: 400px;
   }
   .tools {
     -ms-grid-columns: (1fr)[5];
@@ -800,11 +800,6 @@ footer {
 @media screen and (min-width: 1200px) {
   body {
     padding: 0 8rem;
-    font-size: 16px;
-  }
-  .header-image {
-    max-width: 500px;
-    height: 100vh;
   }
   .service-items {
     gap: 100px;
