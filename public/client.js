@@ -4,10 +4,12 @@ const navLinks = document.getElementsByClassName("nav-link")
 const menu = document.getElementsByClassName("menu-items")[0]
 const emailBtn = document.getElementById("copy-button")
 const email = document.getElementById("email-copied")
+const form = document.querySelector(".form")
+const clientEmail = document.getElementById("email")
+const clientMessage = document.getElementById("message")
 
 const navLinksarr = [...navLinks]
 
-console.log(email, emailBtn)
 
 // Add or remove menu on clicking menu button
 menuBtn.addEventListener("click", () =>{
@@ -83,3 +85,35 @@ ScrollReveal().reveal(".copyright", {delay:800,easing:"ease-in"});
 ScrollReveal().reveal(".address", {delay:900,easing:"ease-in"});
 ScrollReveal().reveal(".socials", {delay:1000,easing:"ease-in"});
 
+
+// form
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
+
+    let formData = {
+        email : clientEmail.value,
+        message : clientMessage.value
+    }
+
+    let xhr = new XMLHttpRequest()
+    xhr.open("POST", "/email")
+    xhr.setRequestHeader('content-type', 'application/json')
+    xhr.onload = () =>{
+        console.log(xhr.responseText)
+        if(xhr.responseText === 'success'){
+            alert("Email sent. Thank you!")
+            
+        }else{
+            alert("something went wrong . please try again")
+        }
+    }
+    
+    xhr.send(JSON.stringify(formData))
+
+    // clear form values after submitting
+    clientEmail.value = '',
+    clientMessage.value = ''
+
+
+})
