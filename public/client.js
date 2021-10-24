@@ -100,7 +100,6 @@ form.addEventListener("submit", (e) => {
     xhr.open("POST", "/email")
     xhr.setRequestHeader('content-type', 'application/json')
     xhr.onload = () =>{
-        console.log(xhr.responseText)
         if(xhr.responseText === 'success'){
             alert("Email sent. Thank you!")
             
