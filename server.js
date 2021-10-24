@@ -23,9 +23,7 @@ app.get("/",(req,res) =>{
 
 app.post("/email", (req,res) =>{
   // get input from the form and use the info in the mailOptions of mailgun
-
-  console.log(req.body)
-
+console.log(req.body.email)
 // create nodemailer transporter
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -44,13 +42,12 @@ app.post("/email", (req,res) =>{
     from: req.body.email,
     to: "mashoado@gmail.com",
     subject: "Employers from portfolio",
-    text: req.body.message
+    text: req.body.message + req.body.email
 
   }
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error){
-      console.log(error)
       res.send("An error occurred please retry again")
 
     }else{
