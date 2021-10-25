@@ -25,17 +25,23 @@ app.post("/email", (req,res) =>{
   // get input from the form and use the info in the mailOptions of mailgun
 console.log(req.body.email)
 // create nodemailer transporter
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    secure: false,
-    auth: {
-      user:"mashoado@gmail.com",
-      pass: "134637524"
-    },
-    tls:{
-      rejectUnauthorized: false
-    }
-  })
+let transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
+  auth: {
+      type: 'OAuth2',
+      user: 'mashoado@gmail.com',
+      client_id:"376291037680-r1ereu2t8jk90jboetpd9mg7ufde8h5a.apps.googleusercontent.com",
+      client_secret:"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",
+      project_id:"astral-depth-330108",
+      auth_uri:"https://accounts.google.com/o/oauth2/auth",token_uri:"https://oauth2.googleapis.com/token",auth_provider_x509_cert_url:"https://www.googleapis.com/oauth2/v1/certs",client_secret:"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",javascript_origins:["https://mashoado.herokuapp.com"]
+      
+  },
+  tls: {
+    rejectUnauthorized: false
+}
+});
 
   // configure mail options with form data 
   const mailOptions = {
@@ -48,6 +54,7 @@ console.log(req.body.email)
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error){
+      console.log(error)
       res.send("An error occurred please retry again")
 
     }else{
