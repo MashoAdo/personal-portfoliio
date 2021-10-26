@@ -259,14 +259,17 @@ nav {
   border-bottom: 1px solid #8f887d;
 }
 
-.introduction span {
-  font-family: "Poppins", sans-serif;
+#greetings {
+  font-family: "Lato", sans-serif;
   color: #8f887d;
-  font-size: 1rem;
-  margin-bottom: 1rem;
 }
 
-.introduction span strong {
+.introduction #profession {
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.introduction #profession:hover {
   color: #ec5527;
 }
 

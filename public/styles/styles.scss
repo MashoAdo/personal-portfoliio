@@ -230,10 +230,14 @@ nav {
 	padding: 4rem 0;
 	border-bottom: 1px solid $paragraph;
 }
+#greetings {
+	font-family: $headings;
+	color: $paragraph;
+}
 .introduction {
-	span {
-		@include h5Heading();
-		strong {
+	#profession {
+		transition: color 0.3s ease-in-out;
+		&:hover {
 			color: $Orange-hover;
 		}
 	}
