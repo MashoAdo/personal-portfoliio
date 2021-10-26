@@ -3,3 +3,4 @@
 node_modules/
 style-guide.md
 public/styles/styles.css.map
+client_secret.json
