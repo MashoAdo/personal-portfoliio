@@ -1,6 +1,7 @@
 .env
-.gitignore
+.gitignore/
 node_modules/
 style-guide.md
+/package-lock.json
 public/styles/styles.css.map
-client_secret.json
+client_secret2.json
