@@ -104,7 +104,7 @@ form.addEventListener("submit", (e) => {
             alert("Email sent. Thank you!")
             
         }else{
-            alert("something went wrong . please try again")
+            alert("Sorry , email not sent. Copy email instead and send the message directly")
         }
     }
     
