@@ -7,7 +7,7 @@ const { raw } = require("express")
 
 const app = express()
 
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 8000
 
 // middlewares
 app.use(express.urlencoded({extended:false}))
@@ -29,17 +29,18 @@ app.post("/email", (req,res) =>{
 // get input from the form and use the info in the mailOptions of nodemailer
 // Creating Oauth2 to enable sending the email safely
 const OAuth2 = google.auth.OAuth2
+// res.send("recieved")})
 
 // setup auth2Client
 const oauth2Client = new OAuth2(
-  "19765224990-8gg94bta37mp549tft4thi1rk4s7q919.apps.googleusercontent.com",
-  "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",
+  "1056257353442-644b1aqhj4tcvc3prf60ruakef36lq9n.apps.googleusercontent.com",
+  "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",
   "https://developers.google.com/oauthplayground"
 
 )
-// get access token using refresh token
+// // get access token using refresh token
 oauth2Client.setCredentials({
-  refresh_token: '1//04JX9_0CEc7bPCgYIARAAGAQSNwF-L9IrGvEt4dc69DArFbYqxP3JgpzVFSH2lyns9CzDOprKr9q3Vy_sSeWYYs6MimHMXEyfjA4'
+  refresh_token: '1//044-Gm99qmea8CgYIARAAGAQSNwF-L9Ir8MWx2ntWGhUojRMFhe_-SwAfblqgs2rwrJFxWaRKdjt7ICwSnV-owaBKtioIMx_Ht-w'
 })
 
 const accessToken = oauth2Client.getAccessToken()
@@ -50,10 +51,10 @@ let transporter = nodemailer.createTransport({
   auth: {
       type: 'OAuth2',
       user: 'mashoado@gmail.com',
-      client_id:"19765224990-8gg94bta37mp549tft4thi1rk4s7q919.apps.googleusercontent.com",
-      client_secret:"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",
-      refresh_token: '1//04JX9_0CEc7bPCgYIARAAGAQSNwF-L9IrGvEt4dc69DArFbYqxP3JgpzVFSH2lyns9CzDOprKr9q3Vy_sSeWYYs6MimHMXEyfjA4',
-      accessToken:'ya29.a0ARrdaM8bpFzQevbSmZRQo_ML3ZRfW6Tlq1PiOzYElrnecSWOTi9bzcEDpcddkF_y-v0_MOibnOHGHS3_DiyAQH2FrpCFISVJfvfYUmQcSkncH_3NCvrfGE9O6hNtsBFQtWoEsGTLOodkuInYtJkFvw-Vkkga ' || accessToken
+      client_id:"1056257353442-644b1aqhj4tcvc3prf60ruakef36lq9n.apps.googleusercontent.com",
+      client_secret:"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",
+      refresh_token: '1//044-Gm99qmea8CgYIARAAGAQSNwF-L9Ir8MWx2ntWGhUojRMFhe_-SwAfblqgs2rwrJFxWaRKdjt7ICwSnV-owaBKtioIMx_Ht-w',
+      accessToken: 'ya29.a0ARrdaM9RQo8FiicKHMp-FX3phsZTbkN3kAqx_ACWtVzrRMRfKHTXP8lFhRZ4CbK33K8HFc5d1WV5OoxhfBfsBaNqyqMjIG1udELijKVQ5k8uBO2jgUsc3uBrwPF_BPNHtNsZSUsWL241wePyzH2LLotYP9SH'
   },
   tls: {
     rejectUnauthorized: false
@@ -65,18 +66,20 @@ let transporter = nodemailer.createTransport({
     from: req.body.email,
     to: "mashoado@gmail.com",
     subject: "Employers from portfolio",
-    text: req.body.message + "" +req.body.email
+    text: req.body.message + " " + req.body.email
 
   }
 
   transporter.sendMail(mailOptions, (error, info) => {
-   error ? res.write("not succesful"):  res.send("success")
+    // use ternary operator
+    error? res.send("error") : res.send("success")
   })
   transporter.close()
+  // res.end()
  })
 
 
 
 app.listen(PORT,() =>{
-    console.log(`Listening on port 8080`)
+    console.log(`Listening on port 8000`)
 })
