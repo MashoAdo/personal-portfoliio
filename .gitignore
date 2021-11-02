@@ -2,6 +2,6 @@
 .gitignore/
 node_modules/
 style-guide.md
-/package-lock.json
+package-lock.json
 public/styles/styles.css.map
-client_secret2.json
+client_secret.json

@@ -22,21 +22,15 @@ app.get("/",(req,res) =>{
     res.render("index.ejs")
 })
 
-
-
-
-app.post("/email", (req,res) =>{
-// get input from the form and use the info in the mailOptions of nodemailer
+// app.post("/token" )
 // Creating Oauth2 to enable sending the email safely
-const OAuth2 = google.auth.OAuth2
-// res.send("recieved")})
+const OAuth2 = google.auth.OAuth2;
 
 // setup auth2Client
 const oauth2Client = new OAuth2(
   "1056257353442-644b1aqhj4tcvc3prf60ruakef36lq9n.apps.googleusercontent.com",
   "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",
   "https://developers.google.com/oauthplayground"
-
 )
 // // get access token using refresh token
 oauth2Client.setCredentials({
@@ -44,35 +38,42 @@ oauth2Client.setCredentials({
 })
 
 const accessToken = oauth2Client.getAccessToken()
-
 // create nodemailer transporter
 let transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
   auth: {
       type: 'OAuth2',
-      user: 'mashoado@gmail.com',
-      client_id:"1056257353442-644b1aqhj4tcvc3prf60ruakef36lq9n.apps.googleusercontent.com",
-      client_secret:"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",
-      refresh_token: '1//044-Gm99qmea8CgYIARAAGAQSNwF-L9Ir8MWx2ntWGhUojRMFhe_-SwAfblqgs2rwrJFxWaRKdjt7ICwSnV-owaBKtioIMx_Ht-w',
-      accessToken: 'ya29.a0ARrdaM9RQo8FiicKHMp-FX3phsZTbkN3kAqx_ACWtVzrRMRfKHTXP8lFhRZ4CbK33K8HFc5d1WV5OoxhfBfsBaNqyqMjIG1udELijKVQ5k8uBO2jgUsc3uBrwPF_BPNHtNsZSUsWL241wePyzH2LLotYP9SH'
+      user: process.env.EMAIL_USER,
+      client_id: process.env.client_id,
+      client_secret: process.env.client_secret,
+      refresh_token:"1//044-Gm99qmea8CgYIARAAGAQSNwF-L9Ir8MWx2ntWGhUojRMFhe_-SwAfblqgs2rwrJFxWaRKdjt7ICwSnV-owaBKtioIMx_Ht-w",
+      accessToken: accessToken
   },
   tls: {
     rejectUnauthorized: false
 }
 });
 
+
+// post request to receive data from the form and send information to my email
+app.post("/email", (req,res) =>{
+// get input from the form and use the info in the mailOptions of nodemailer
+const {email, message} = req.body
+
   // configure mail options with form data 
   const mailOptions = {
-    from: req.body.email,
+    from: email,
     to: "mashoado@gmail.com",
     subject: "Employers from portfolio",
-    text: req.body.message + " " + req.body.email
+    text: message + " " + email
 
   }
 
   transporter.sendMail(mailOptions, (error, info) => {
     // use ternary operator
-    error? res.send("error") : res.send("success")
+    error? console.log(error) : res.send("success")
   })
   transporter.close()
   // res.end()
