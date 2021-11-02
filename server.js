@@ -22,7 +22,6 @@ app.get("/",(req,res) =>{
     res.render("index.ejs")
 })
 
-// app.post("/token" )
 // Creating Oauth2 to enable sending the email safely
 const OAuth2 = google.auth.OAuth2;
 
@@ -30,7 +29,7 @@ const OAuth2 = google.auth.OAuth2;
 const oauth2Client = new OAuth2(
   "1056257353442-644b1aqhj4tcvc3prf60ruakef36lq9n.apps.googleusercontent.com",
   "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",
-  "https://developers.google.com/oauthplayground"
+  // "https://developers.google.com/oauthplayground"
 )
 // // get access token using refresh token
 oauth2Client.setCredentials({
@@ -40,9 +39,7 @@ oauth2Client.setCredentials({
 const accessToken = oauth2Client.getAccessToken()
 // create nodemailer transporter
 let transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 465,
-  secure: true,
+ service: "gmail",
   auth: {
       type: 'OAuth2',
       user: process.env.EMAIL_USER,
