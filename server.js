@@ -2,7 +2,6 @@ const express = require("express");
 const path = require("path");
 const nodemailer = require("nodemailer");
 require("dotenv").config();
-const { google } = require("googleapis");
 
 const app = express();
 
