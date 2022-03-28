@@ -21,11 +21,6 @@ navLinksarr.forEach((link) => {
 	});
 });
 
-// remove loader when all files have been sent to client browser
-$(window).on("load", function () {
-	$(".preloader-wrapper").fadeOut("slow");
-});
-
 // copy text on clipboard using clipboard api
 const textToCopy = email.textContent;
 
@@ -101,7 +96,6 @@ ScrollReveal().reveal(".address", { delay: 700, easing: "ease-in" });
 ScrollReveal().reveal(".socials", { delay: 900, easing: "ease-in" });
 
 // form
-
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
 	console.log(clientEmail.value, clientMessage.value);
