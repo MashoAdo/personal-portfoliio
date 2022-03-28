@@ -6,6 +6,11 @@ const email = document.getElementById("email-copied");
 const form = document.querySelector(".form");
 const clientEmail = document.getElementById("email");
 const clientMessage = document.getElementById("message");
+const copyright = document.getElementById("year");
+
+// get current year , include the year into the copyright
+const currentYear = new Date().getFullYear();
+copyright.textContent += currentYear;
 
 const navLinksarr = [...navLinks];
 
