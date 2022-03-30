@@ -1,7 +1,3 @@
-// Import fonts from google fonts
-
-@import url("https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Lato:wght@400;700;900&family=Poppins:wght@300;400&display=swap");
-
 // Resetting css
 html {
 	scroll-behavior: smooth;
@@ -37,7 +33,7 @@ $Orange-hover: hsl(14, 84%, 54%);
 // FONTS
 $paragraph-text: "Poppins", sans-serif;
 $headings: "Lato", sans-serif;
-$Logo: "Fleur De Leah", cursive;
+$Logo: "Bebas Neue", cursive;
 
 // font weights
 $font-weights: (
@@ -477,6 +473,10 @@ footer {
 		.service-item {
 			margin: 0;
 		}
+	}
+
+	footer {
+		@include flexDirection(row, space-between);
 	}
 }
 
