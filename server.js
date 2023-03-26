@@ -16,6 +16,14 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 
 app.set("view engine", "ejs");
 
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL,
+    pass: process.env.PASS,
+  },
+});
+
 // render home page
 app.get("/", (req, res) => {
   res.render("index.ejs");
@@ -35,10 +43,12 @@ app.post("/email", (req, res) => {
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
-    // use ternary operator
-    error ? console.log(error) : transporter.close();
+    if (!error) {
+      transporter.close();
+    }
+    res.json({ status: 400, success: false, message: "Failed sending email" });
   });
-  res.send("success");
+  res.json({ status: 200, success: true, message: "Email successfully sent" });
 });
 
 app.listen(PORT, () => {
