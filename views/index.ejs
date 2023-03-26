@@ -1,312 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Masho Ado</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../public/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../public/images/favicon.ico" type="image/x-icon" />
 
     <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700;900&family=Poppins:wght@300;400&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700;900&family=Poppins:wght@300;400&display=swap" rel="stylesheet" />
     <!-- jquery -->
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- Style Sheet -->
-    <link rel="stylesheet" href="../public/styles/styles.css">
+    <link rel="stylesheet" href="../public/styles/styles.css" />
 
     <!-- scroll reveal -->
     <script async src="https://unpkg.com/scrollreveal"></script>
 
     <!-- Ion Icons -->
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <header id="home">
-        <nav>
-            <div class="top-nav">
-                <h3 class="logo">Masho Ado</h3>
-                <div class="menu-btn">
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
-                </div>
-            </div>
-            <ul class="menu-items">
-                <a class="nav-link" href="#home">HOME</a>
-                <a class="nav-link" href="#stack">SKILLS</a>
-                <a class="nav-link" href="#services">SERVICES</a>
-                <a class="nav-link" href="#projects">PROJECTS</a>
-                <a class="nav-link" href="#contact">CONTACT</a>
-            </ul>
-        </nav>
-        <div class="header-information">
-            <div class="introduction-container">
-                <div class="introduction">
-                    <span id="greetings">Hello , I am </span>
-                    <h1 id="profession">MASHO ADO, <br> A WEB DEVELOPER.</h1>
-                    <p id="profession-description">I create web solutions using Html5, Css3 ,JavaScript, <br> React,
-                        Bootsrap5 and backend tools such as Nodejs,<br> Expressjs, MongoDB and RESTful APIs.
-                    </p>
-                </div>
-
-                <div class="chat-button">
-                    <h2 class="lets-chat">LET'S TALK</h2>
-                    <h2 class="lets-chat" id="email-copied">mashoado@gmail.com</h2>
-                    <button class="email-button" id="copy-button">click to copy</button>
-                </div>
-            </div>
-            <div class="header-image">
-                <img class="profile-image" src="../public/formated-minified/myphoto.webp" alt="Masho-image">
-            </div>
+      <nav>
+        <div class="top-nav">
+          <h3 class="logo">Masho Ado</h3>
+          <div class="menu-btn">
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+          </div>
         </div>
+        <ul class="menu-items">
+          <a class="nav-link" href="#home">HOME</a>
+          <a class="nav-link" href="#summary">SUMMARY</a>
+          <a class="nav-link" href="#services">SERVICES</a>
+          <a class="nav-link" href="#projects">PROJECTS</a>
+          <a class="nav-link" href="#contact">CONTACT</a>
+        </ul>
+      </nav>
+      <div class="header-information">
+        <div class="introduction-container">
+          <div class="introduction">
+            <span id="greetings">Hello , I am </span>
+            <h1 id="profession">
+              MASHO ADO, <br />
+              A FULL STACK DEVELOPER.
+            </h1>
+            <p id="profession-description">I build web solutions from ideation ,implementation ,deployment and maintenance using React, Node.js, Express, Adonis.js, MongoDB, SQL, AWS and other cloud solutions</p>
+          </div>
+
+          <div class="chat-button">
+            <h2 class="lets-chat">LET'S TALK</h2>
+            <h2 class="lets-chat" id="email-copied">mashoado@gmail.com</h2>
+            <button class="email-button" id="copy-button">click to copy</button>
+          </div>
+        </div>
+        <div class="header-image">
+          <img class="profile-image" src="../public/images/formated-minified/myphoto.webp" alt="Masho-image" />
+        </div>
+      </div>
     </header>
 
     <main>
-        <section id="stack">
-            <div class="current-stack">
-                <span>Frontend Stack</span>
-                <ul class="tools">
-                    <li class="skill">Html5 <div class="slanted-line"></div>
-                    </li>
-                    <li class="skill">Css3<div class="slanted-line"></div>
-                    </li>
-                    <li class="skill">Sass<div class="slanted-line"></div>
-                    </li>
-                    <li class="skill">Bootsrap<div class="slanted-line"></div>
-                    </li>
-                    <li class="skill">Reactjs<div class="slanted-line"></div>
-                    </li>
-                    <li class="skill">JavaScript<div class="slanted-line"></div>
-                    </li>
-                </ul>
+      <section id="summary">
+        <h2 id="section-title">
+          PROFESSIONAL <br />
+          SUMMARY
+        </h2>
+        <br />
+        <p>
+          As a Full Stack Web Developer from Nairobi, Kenya, I've spent the last 4 years working with a range of technologies, such as React, Node.js, Express, Adonis.js, MongoDB, and SQL. I've played a pivotal role in the development of several
+          complex web applications, from the idea stage to implementation and usage by end-users.
+        </p>
+        <br />
+        <p>
+          In my most recent role at Zumi, I spearheaded the development and launch of a key feature on the company's web platform - the ability to bargain between suppliers and retailers. This involved gathering requirements, designing the
+          architecture, building the API, and creating the UI. Throughout the development process, I collaborated closely with the my team members,UI/UX designer and the product manager to ensure thorough testing and seamless integration into the
+          platform. Overall, my experience and collaborative skills make me a strong candidate for any role in the field, and I'm excited to continue delivering high-quality products that meet the needs of users.
+        </p>
+
+        <div class="current-stack">
+          <h6>TECH STACK</h6>
+          <ul class="tools">
+            <li class="skill">
+              JavaScript
+              <div class="slanted-line"></div>
+            </li>
+
+            <li class="skill">
+              Bootstrap
+              <div class="slanted-line"></div>
+            </li>
+
+            <li class="skill">
+              ReactJs
+              <div class="slanted-line"></div>
+            </li>
+
+            <li class="skill">
+              NextJs
+              <div class="slanted-line"></div>
+            </li>
+
+            <li class="currently-learning-skill">
+              NodeJs
+              <div class="slanted-line"></div>
+            </li>
+
+            <li class="currently-learning-skill">
+              ExpressJs
+              <div class="slanted-line"></div>
+            </li>
+
+            <li class="currently-learning-skill">
+              AdonisJs
+              <div class="slanted-line"></div>
+            </li>
+
+            <li class="currently-learning-skill">
+              MongoDB
+              <div class="slanted-line"></div>
+            </li>
+
+            <li class="currently-learning-skill">
+              SQL
+              <div class="slanted-line"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="currently-learning">
+          <h6>TOOLS</h6>
+          <ul class="tools">
+            <li class="currently-learning-skill">
+              Git & Github
+              <div class="slanted-line"></div>
+            </li>
+            <li class="currently-learning-skill">
+              Amazon EC2 & S3
+              <div class="slanted-line"></div>
+            </li>
+
+            <li class="currently-learning-skill">
+              Jira & Trello
+              <div class="slanted-line"></div>
+            </li>
+            <li class="currently-learning-skill">
+              Slack
+              <div class="slanted-line"></div>
+            </li>
+            <li class="currently-learning-skill">
+              <div class="slanted-line"></div>
+            </li>
+            <li class="currently-learning-skill">
+              Confluence
+              <div class="slanted-line"></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="services">
+        <div class="services">
+          <span>What I can Do</span>
+          <div class="service-items">
+            <div class="service-item">
+              <h6>CONVERT UI/UX DESIGNS TO CODE</h6>
+              <p>
+                The ultimate duty for any frontend developer is to bring designs into life by converting the designs into code. I am open to collaboration with your design team in order to deliver the best user interface and a seamless user
+                experience.
+              </p>
             </div>
-            <div class="currently-learning">
-                <span>Familiar With</span>
-                <ul class="tools">
-                    <li class="currently-learning-skill">Nodejs<div class="slanted-line"></div>
-                    </li>
-                    <li class="currently-learning-skill">Expressjs<div class="slanted-line"></div>
-                    </li>
-                    <li class="currently-learning-skill">MongoDB<div class="slanted-line"></div>
-                    </li>
-                    <li class="currently-learning-skill">GraphQL<div class="slanted-line"></div>
-                    </li>
-                    <li class="currently-learning-skill">Restful Api<div class="slanted-line"></div>
-                    </li>
-                </ul>
+            <div class="service-item">
+              <h6>RESPONSIVE DESIGN</h6>
+              <p>
+                Mobile phones and tablets are responsible for 56.74% of global internet usage. My process of developement therefore takes into consideration the need for the websites to be responsive to all screens sizes by using media queries, fluid
+                grids and flexibel visuals and as a result i use the mobile first approach.
+              </p>
             </div>
-
-        </section>
-        <section id="services">
-            <div class="services">
-                <span>What I can Do</span>
-                <div class="service-items">
-                    <div class="service-item">
-                        <h6>CONVERT UI/UX DESIGNS TO CODE</h6>
-                        <p>The ultimate duty for any frontend developer is to bring designs into life by converting the
-                            designs into code. I am open to collaboration with your design team in order to
-                            deliver the best user interface and a seamless user experience.
-                        </p>
-                    </div>
-                    <div class="service-item">
-                        <h6>RESPONSIVE DESIGN</h6>
-                        <p>Mobile phones and tablets are responsible for 56.74% of global internet usage. My process of
-                            developement therefore takes into consideration the need for the websites to be responsive
-                            to all screens sizes by using media queries, fluid grids and flexibel visuals and as a
-                            result i use the mobile first approach.</p>
-                    </div>
-                    <div class="service-item">
-                        <h6> INTERGRATE DATA FROM APIs INTO UI</h6>
-                        <p>Most websites use data from external sources like databases and APIs, this data
-                            needs to be
-                            dynamically updated into websites. I am conversant with fetching data using fetch API and
-                            displaying data into UI</p>
-                    </div>
-                    <div class="service-item">
-                        <h6>SEO (Search Engine Optimization)</h6>
-                        <p>SEO is responsible in driving traffic towards your website (isn't that what we all want) by
-                            making search engines rank your
-                            website favourably. I apply SEO
-                            principles such as clean
-                            code,responsive design and image optimization e.t.c during the
-                            development
-                            process
-                            to improve SEO.</p>
-                    </div>
-                </div>
+            <div class="service-item">
+              <h6>INTEGRATE DATA FROM APIs INTO UI</h6>
+              <p>Most websites use data from external sources like databases and APIs, this data needs to be dynamically updated into websites. I am conversant with fetching data using fetch API and displaying data into UI</p>
             </div>
-        </section>
-
-        <section id="projects">
-            <h1 id="projects-title">LATEST <br> PROJECTS</h1>
-
-            <div class="project-items">
-
-                <div class="project-item">
-                    <div class="project-img">
-                        <img src="../public/formated-minified/Designo.webp" loading="lazy" alt="crowdFund-img">
-                    </div>
-                    <div class="project-information">
-                        <h3>Designo website </h3>
-                        <p>Designo is a Digital Design company that offers services such as App, Web and Graphic
-                            Design. This
-
-                            7 multipage website showcases the services offered by company with each page displaying the
-                            service and previous works of the service offered. The other 4 pages include the
-                            home, about, location and contact pages to enable the
-                            clients to know more about the company and how to reach them. The website seamlessly
-                            routes to different pages within the site and is responsive to all screen sizes(Go on resize
-                            it as you want.</p>
-
-                        <span> Technical Details :</span>
-                        <p>This website is built with React a JavaScript library and maximizes on it's component
-                            reusability. Routing has been done using the React-router module.It was fun building such a
-                            large project</p>
-                        <div class="project-links">
-                            <a href="https://github.com/MashoAdo/Designo-Website">VIEW SOURCE CODE</a>
-                            <a href="https://designo-co.netlify.app/">VIEW LIVE SITE</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-item">
-                    <div class="project-img">
-                        <img src="../public/formated-minified/fpl.webp" loading="lazy" alt="sunnySideAgency-img">
-                    </div>
-                    <div class="project-information">
-                        <h3>Fantasy Premier League(FPL) Transfer assist</h3>
-                        <p>Are you aware of the <a class="external-link"
-                                href="https://fantasy.premierleague.com/">Fantasy Premier League?</a> and the headache
-                            that comes with making transfer decision on every matchday.This
-                            webapp assist managers by curating a few players from the 600+ players . The
-                            players are ranked according to form, diffculty of their next fixtures and threat
-                            they pose
-                            to opponets teams. The players are categorised according to their playing position, long
-                            term availability and Most in-form 11. This gives
-                            managers a clear picture on what position to strengthen. I
-                            personally use it for my FPL team mangement and it was really fun building something it.
-                            More UI and Logic will be improved before the start of next season.
-                        </p>
-
-                        <span>Technical Details :</span>
-                        <p>This UI is built with react and backend built on
-                            Nodejs
-                            and Expressjs. The backend was necessary because the FPL Api implements a CORS policy that
-                            inhibits their resource being accesed from a different origin. I created an endpoint that
-                            fetched from the FPL api and serverd to frontend.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/MashoAdo/fplTransferAssist">VIEW SOURCE CODE</a>
-                            <a href="https://fpl-transfer-assist.herokuapp.com/"> VIEWLIVE SITE</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-item">
-                    <div class="project-img">
-                        <img src="../public/formated-minified/Easybank.webp" loading="lazy" alt="easyBank-img">
-                    </div>
-                    <div class="project-information">
-                        <h3>EasyBank landing page</h3>
-                        <p>This a landing page for a fictional bank. This site a nice clean layout and is responsive to
-                            all screen sizes , its hover states are smooth.The page gives an overview of what services
-                            the banks offers, its blogs and a request to invite button
-                        </p>
-
-                        <span>Technical Details :</span>
-                        <p>
-                            It is built on the barebones of html5, scss which is transpiled to css and JavaScript
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/MashoAdo/Easy-banking">VIEW SOURCE CODE</a>
-                            <a href="https://bank2easy.netlify.app/"> VIEW LIVE SITE</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-img">
-                        <img src="../public/formated-minified/loopStudios.webp" loading="lazy" alt="loops-studios-img">
-                    </div>
-                    <div class="project-information">
-                        <h3>Loop Studios</h3>
-                        <p>Loop Studios is digital company that offers virtual reality services to its clients.This
-                            landing page displays their previous creations as grid and it is responsive to all screen
-                            sizes</p>
-                        <span>Technical Details :</span>
-                        <p>
-                            It is built on the barebones of html5, scss which is transpiled to css and JavaScript
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/MashoAdo/loops-studios">VIEW SOURCE CODE</a>
-                            <a href="https://loopstudiosvr.netlify.app/"> VIEW LIVE SITE</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="service-item">
+              <h6>SEO (Search Engine Optimization)</h6>
+              <p>
+                SEO is responsible in driving traffic towards your website (isn't that what we all want) by making search engines rank your website favourably. I apply SEO principles such as clean code,responsive design and image optimization e.t.c
+                during the development process to improve SEO.
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section id="contact">
-            <span>Let's Chat</span>
-            <form action="/email" method="post" class="form">
-                <label>Email : <input required type="email" name="email" id="email"></label>
+      <section id="projects">
+        <h1 id="section-title">
+          LATEST <br />
+          PROJECTS
+        </h1>
 
-                <label for="message">Message :<input required type="text" name="message" id="message"></label>
-                <button type="submit" id="submit">Send Message</button>
-            </form>
-        </section>
+        <div class="project-items">
+          <div class="project-item">
+            <div class="project-img">
+              <img src="../public/images/formated-minified/Designo.webp" loading="lazy" alt="crowdFund-img" />
+            </div>
+            <div class="project-information">
+              <h3>Designo website</h3>
+              <p>
+                Designo is a Digital Design company that offers services such as App, Web and Graphic Design. This 7 multipage website showcases the services offered by company with each page displaying the service and previous works of the service
+                offered. The other 4 pages include the home, about, location and contact pages to enable the clients to know more about the company and how to reach them. The website seamlessly routes to different pages within the site and is
+                responsive to all screen sizes(Go on resize it as you want.
+              </p>
+
+              <span> Technical Details :</span>
+              <p>This website is built with React a JavaScript library and maximizes on it's component reusability. Routing has been done using the React-router module.It was fun building such a large project</p>
+              <div class="project-links">
+                <a href="https://github.com/MashoAdo/Designo-Website">VIEW SOURCE CODE</a>
+                <a href="https://designo-co.netlify.app/">VIEW LIVE SITE</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <div class="project-img">
+              <img src="../public/images/formated-minified/theShack.webp" loading="lazy" alt="sunnySideAgency-img" />
+            </div>
+            <div class="project-information">
+              <h3>The Shack</h3>
+              <p>
+                The Shack is a website platform for restaurant in Nairobi West that sells fast food. The restaurant wanted a website where their customers who are mostly familiar with its menu wanted could place orders online, this helped spike in
+                delivery orders since customers can now easily online especially on days where there is an offer. The website design was mainly focused on making it mobile friendly but its still responsive in both tablet and desktop
+              </p>
+
+              <span>Technical Details :</span>
+              <p>
+                This UI is built with NextJs - a react framework. After Making an Order the order is sent to whatsapp where the customer can continue chatting with the restaurant. I chose NextJs over plain React due to lack of SEO in React.With
+                NextJs ability SSR(sever side render) and SSG(server side generate) search engine web crawlers can easily index this site since the html code is generated on the server
+              </p>
+              <div class="project-links">
+                <a href="https://order.theshack.co.ke"> VIEW LIVE SITE</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <div class="project-img">
+              <img src="../public/images/formated-minified/fpl.webp" loading="lazy" alt="sunnySideAgency-img" />
+            </div>
+            <div class="project-information">
+              <h3>Fantasy Premier League(FPL) Transfer assist</h3>
+              <p>
+                Are you aware of the <a class="external-link" href="https://fantasy.premierleague.com/">Fantasy Premier League?</a> and the headache that comes with making transfer decision on every matchday.This webapp assist managers by curating a
+                few players from the 600+ players . The players are ranked according to form, diffculty of their next fixtures and threat they pose to opponets teams. The players are categorised according to their playing position, long term
+                availability and Most in-form 11. This gives managers a clear picture on what position to strengthen. I personally use it for my FPL team mangement and it was really fun building something it. More UI and Logic will be improved before
+                the start of next season.
+              </p>
+
+              <span>Technical Details :</span>
+              <p>
+                This UI is built with react and backend built on Nodejs and Expressjs. The backend was necessary because the FPL Api implements a CORS policy that inhibits their resource being accesed from a different origin. I created an endpoint
+                that fetched from the FPL api and serverd to frontend.
+              </p>
+              <div class="project-links">
+                <a href="https://github.com/MashoAdo/fplTransferAssist">VIEW SOURCE CODE</a>
+                <a href="https://fpl-transfer-assist.herokuapp.com/"> VIEWLIVE SITE</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <div class="project-img">
+              <img src="../public/images/formated-minified/Easybank.webp" loading="lazy" alt="easyBank-img" />
+            </div>
+            <div class="project-information">
+              <h3>EasyBank landing page</h3>
+              <p>
+                This a landing page for a fictional bank. This site a nice clean layout and is responsive to all screen sizes , its hover states are smooth.The page gives an overview of what services the banks offers, its blogs and a request to
+                invite button
+              </p>
+
+              <span>Technical Details :</span>
+              <p>It is built on the barebones of html5, scss which is transpiled to css and JavaScript</p>
+              <div class="project-links">
+                <a href="https://github.com/MashoAdo/Easy-banking">VIEW SOURCE CODE</a>
+                <a href="https://bank2easy.netlify.app/"> VIEW LIVE SITE</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-img">
+              <img src="../public/images/formated-minified/loopStudios.webp" loading="lazy" alt="loops-studios-img" />
+            </div>
+            <div class="project-information">
+              <h3>Loop Studios</h3>
+              <p>Loop Studios is digital company that offers virtual reality services to its clients.This landing page displays their previous creations as grid and it is responsive to all screen sizes</p>
+              <span>Technical Details :</span>
+              <p>It is built on the barebones of html5, scss which is transpiled to css and JavaScript</p>
+              <div class="project-links">
+                <a href="https://github.com/MashoAdo/loops-studios">VIEW SOURCE CODE</a>
+                <a href="https://loopstudiosvr.netlify.app/"> VIEW LIVE SITE</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <span>Let's Chat</span>
+        <form action="/email" method="post" class="form">
+          <label>Email : <input required type="email" name="email" id="email" /></label>
+
+          <label for="message">Message :<input required type="text" name="message" id="message" /></label>
+          <button type="submit" id="submit">Send Message</button>
+        </form>
+      </section>
     </main>
 
     <footer>
-        <div class="footer-left">
-            <h3 class="logo">Masho Ado</h3>
-            <P class="copyright"> &copy;
-                <span id="year"></span>. All Rights Reserved
-            </P>
+      <div class="footer-left">
+        <h3 class="logo">Masho Ado</h3>
+        <P class="copyright"> &copy; <span id="year"></span>. All Rights Reserved </P>
+      </div>
+      <div class="footer-right">
+        <div class="address">
+          <p>mashoado@gmail.com</p>
+          <p>From Nairobi, Kenya</p>
+          <P>+254 724 261 655</P>
         </div>
-        <div class="footer-right">
-            <div class="address">
-                <p>mashoado@gmail.com</p>
-                <p>From Nairobi, Kenya</p>
-                <P>+254 724 261 655</P>
-            </div>
-            <ul class="socials">
-                <li>
-                    <a href="https://github.com/MashoAdo?tab=overview">
-                        <img src="../public/images/socials/github.svg" alt="github-svg">
-                    </a>
-                </li>
+        <ul class="socials">
+          <li>
+            <a href="https://github.com/MashoAdo?tab=overview">
+              <img src="../public/images/socials/github.svg" alt="github-svg" />
+            </a>
+          </li>
 
-                <li>
-                    <a href="mailto:mashoado@gmail.com">
-                        <img src="../public/images/socials/email.svg" alt="email-svg">
-                    </a>
-                </li>
+          <li>
+            <a href="mailto:mashoado@gmail.com">
+              <img src="../public/images/socials/email.svg" alt="email-svg" />
+            </a>
+          </li>
 
-                <li>
-                    <a href="tel:+254 724 261 655">
-                        <img src="../public/images/socials/phone-call.svg" alt="phone-svg">
-                    </a>
-                </li>
+          <li>
+            <a href="tel:+254 724 261 655">
+              <img src="../public/images/socials/phone-call.svg" alt="phone-svg" />
+            </a>
+          </li>
 
-                <li>
-                    <a href="https://twitter.com/Xnache">
-                        <img src="../public/images/socials/twitter.svg" alt="twitter-svg">
-                    </a>
-                </li>
-            </ul>
-        </div>
+          <li>
+            <a href="https://twitter.com/Xnache">
+              <img src="../public/images/socials/twitter.svg" alt="twitter-svg" />
+            </a>
+          </li>
+        </ul>
+      </div>
     </footer>
 
     <script src="../public/client.js"></script>
-</body>
-
+  </body>
 </html>
